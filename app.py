@@ -1,4 +1,5 @@
- """AURAmbient · Panel de calidad de agua, guía de pantallas y navegación lateral.
+
+"""AURAmbient · Panel de calidad de agua, guía de pantallas y navegación lateral.
 
 Ejecución local en la computadora conectada por USB al Arduino:
     pip install -r requirements.txt
@@ -648,5 +649,4 @@ elif page == "Ajustes":
                     st.success("Umbrales actualizados.")
 
 st.caption("AURAmbient · Prototipo académico de monitoreo del agua · En modo DEMO los datos son simulados · No certifica potabilidad")
-
 
