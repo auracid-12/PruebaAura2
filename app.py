@@ -375,7 +375,10 @@ html,body,.stApp,[data-testid="stAppViewContainer"], [data-testid="stMain"] {bac
 [data-testid="stAppViewContainer"]>.main {background:linear-gradient(145deg,#061626,#08243b);}
 .block-container{max-width:1500px;padding-top:1.0rem;padding-bottom:3rem;}
 #MainMenu,footer{visibility:hidden;}
-[data-testid="stSidebar"] {background:#071a2d !important;border-right:1px solid #125075 !important;min-width:216px;}
+[data-testid="stSidebar"] {background:#071a2d !important;border-right:none !important;min-width:216px;box-shadow:none !important;}
+[data-testid="stSidebarCollapseButton"]{border:none !important;}
+section[data-testid="stSidebar"]{border-right:none !important;}
+[data-testid="stSidebar"] + div{border-left:none !important;}
 [data-testid="stSidebar"]>div:first-child {padding-top:1.2rem;}
 [data-testid="stSidebar"] .stMarkdown p {color:#a7cbdd;}
 [data-testid="stSidebar"] div[role="radiogroup"] {gap:.38rem;}
@@ -387,9 +390,9 @@ html,body,.stApp,[data-testid="stAppViewContainer"], [data-testid="stMain"] {bac
 .brand-side .mark{display:inline-grid;place-items:center;background:#0c5280;border-radius:12px;width:40px;height:40px;margin-right:8px;color:#69f2ff;}
 .sidebar-note{margin-top:1.8rem;border-radius:13px;padding:11px;background:#0a2b43;border:1px solid #155071;color:#adc9da;font-size:.79rem;}
 .sidebar-note strong{color:#5be9b0;}
-.hero{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px 22px;margin-bottom:22px;background:#082139;border:1px solid #155279;border-radius:18px;min-height:96px;}
+.hero{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 8px 16px 0;margin-bottom:14px;background:transparent;border:none;border-radius:0;min-height:auto;}
 .hero-brand{display:flex;align-items:center;gap:16px;min-width:0;}
-.hero-brand img{width:320px;max-width:100%;display:block;background:transparent;padding:0;border-radius:0;filter:drop-shadow(0 0 12px rgba(41,217,251,.18));}
+.hero-brand img{width:360px;max-width:100%;display:block;background:transparent;padding:0;border-radius:0;filter:drop-shadow(0 0 10px rgba(41,217,251,.16)) drop-shadow(0 0 3px rgba(255,255,255,.08));image-rendering:auto;}
 .hero-brand-copy{display:flex;flex-direction:column;gap:3px;}
 .hero-brand-copy .eyebrow{font-size:.74rem;letter-spacing:.13em;color:#88b7cc;font-weight:800;}
 .hero-brand-copy .subtitle{font-size:.92rem;color:#b8d6e5;}
@@ -674,4 +677,5 @@ elif page == "Ajustes":
                     st.success("Umbrales actualizados.")
 
 st.caption("AURAmbient · Seis parámetros del agua · DEMO: datos simulados · SERIAL: sensores físicos necesarios · No certifica potabilidad")
+
 
